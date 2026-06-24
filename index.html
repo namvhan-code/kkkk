@@ -1,0 +1,23 @@
+<!-- ส่วนเพิ่ม: ช่อง Note สำหรับคัดลอกข้อความ -->
+<div class="note-section">
+    <p>โน้ตสำหรับแนบสลิป:</p>
+    <div class="copy-box" style="border: 1px dashed #ccc; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+        <span id="copyText">ซื้อขายกับร้านลมหนาว</span>
+        <button onclick="copyToClipboard()" style="cursor: pointer;">คัดลอก</button>
+    </div>
+</div>
+
+<script>
+function copyToClipboard() {
+    const text = document.getElementById("copyText").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("คัดลอกข้อความเรียบร้อยแล้ว");
+    });
+}
+</script>
+
+<!-- ส่วนปรับปรุงข้อมูล TrueMoney -->
+<div class="payment-info">
+    <p>ทรูมันนี่ไม่บวกเพิ่ม</p>
+    <img src="1138_20260624085427.png" alt="TrueMoney QR" style="max-width: 200px;">
+</div>
